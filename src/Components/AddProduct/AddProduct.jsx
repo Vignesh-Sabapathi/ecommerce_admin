@@ -7,6 +7,7 @@ const AddProduct = () => {
   const[image,setImage] = useState(false);
   const [productDetails,setProductDetails] = useState({
       name:"",
+      description:"",
       image:"",
       category:"",
       new_price:"",
@@ -63,6 +64,10 @@ const AddProduct = () => {
         <p>Product title</p>
         <input type="text" name="name" value={productDetails.name} onChange={(e)=>{changeHandler(e)}} placeholder="Type here" />
       </div>
+      <div className="addproduct-itemfield">
+        <p>Product Description</p>
+        <input type="text" name="description" value={productDetails.description} onChange={(e)=>{changeHandler(e)}} placeholder="Type here" />
+      </div>
       <div className="addproduct-price">
         <div className="addproduct-itemfield">
           <p>Price</p>
@@ -76,9 +81,9 @@ const AddProduct = () => {
       <div className="addproduct-itemfield">
         <p>Product category</p>
         <select value={productDetails.category} name="category" className="add-product-selector" onChange={changeHandler}>
-          <option value="women">Women</option>
-          <option value="men">Men</option>
-          <option value="kid">Kid</option>
+          <option value="memorial">Memorial</option>
+          <option value="sculpture">Sculpture</option>
+          <option value="artifact">Artifact</option>
         </select> 
       </div>
       <div className="addproduct-itemfield">
